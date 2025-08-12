@@ -51,7 +51,7 @@ export function Footer() {
         <div className="border-t border-border pt-8 flex flex-col-reverse sm:flex-row justify-between items-center gap-6">
            <div className="text-center w-full">
             <p className="text-sm text-muted-foreground">
-              וילת נוף כנרת. כל הזכויות שמורות © {year}
+              © כל הזכויות שמורות לוילת נוף כנרת {year}
             </p>
             <div className="flex items-center justify-center gap-1 text-sm text-muted-foreground">
               <Code className="h-4 w-4" />
