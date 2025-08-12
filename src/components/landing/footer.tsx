@@ -49,9 +49,14 @@ export function Footer() {
         </div>
 
         <div className="border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-           <p className="text-sm text-muted-foreground">
-            &copy; {year} וילת נוף כנרת. כל הזכויות שמורות. נבנה ע"י שמואל רוזנברג
-          </p>
+           <div className="text-center sm:text-right">
+            <p className="text-sm text-muted-foreground">
+              &copy; {year} וילת נוף כנרת. כל הזכויות שמורות.
+            </p>
+            <p className="text-sm text-muted-foreground">
+              נבנה ע"י שמואל רוזנברג
+            </p>
+           </div>
            <div className="flex items-center gap-4">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Facebook className="h-5 w-5" /></a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Instagram className="h-5 w-5" /></a>
