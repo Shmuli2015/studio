@@ -1,3 +1,4 @@
+
 export const galleryImages = [
   { 
     src: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=800&h=600&fit=crop",
