@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
-import { Waves, Home, Trees, ChefHat, ShieldCheck } from 'lucide-react';
+import { Droplets, Bath, Wind, UtensilsCrossed, Fence } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { AnimatedSection } from "./animated-section";
 
@@ -11,11 +11,11 @@ interface Feature {
 }
 
 const features: Feature[] = [
-  { icon: Waves, name: "בריכת שחייה פרטית", description: "מרווחת ומטופחת" },
-  { icon: Home, name: "מקווה פרטי", description: "כשר, מתאים לקהל דתי" },
-  { icon: Trees, name: "חצר ירוקה", description: "דשא, ערסלים ונדנדות" },
-  { icon: ChefHat, name: "מטבח מאובזר", description: "כלי בישול, אפייה ומכשור מודרני" },
-  { icon: ShieldCheck, name: "פרטיות מלאה", description: "וילה מגודרת ללא הפרעות" },
+  { icon: Droplets, name: "בריכת שחייה פרטית", description: "מרווחת ומטופחת" },
+  { icon: Bath, name: "מקווה פרטי", description: "כשר, מתאים לקהל דתי" },
+  { icon: Wind, name: "חצר ירוקה", description: "דשא, ערסלים ונדנדות" },
+  { icon: UtensilsCrossed, name: "מטבח מאובזר", description: "כלי בישול, אפייה ומכשור מודרני" },
+  { icon: Fence, name: "פרטיות מלאה", description: "וילה מגודרת ללא הפרעות" },
 ];
 
 export function About() {

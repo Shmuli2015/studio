@@ -31,7 +31,7 @@ export function Hero() {
           </Button>
           <a href="tel:053-2861478" className="flex items-center gap-2 text-lg font-semibold tracking-wider transition-colors hover:text-primary-foreground/80">
             <Phone className="h-5 w-5" />
-            <span>חייגו עכשיו: 053-2861478</span>
+            <span>חייגו: 053-2861478</span>
           </a>
         </div>
       </div>

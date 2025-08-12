@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Lock, Star, MapPin } from 'lucide-react';
+import { KeyRound, Gem, Mountain } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { AnimatedSection } from "./animated-section";
 
@@ -11,17 +11,17 @@ interface Advantage {
 
 const advantages: Advantage[] = [
   {
-    icon: Lock,
+    icon: KeyRound,
     title: "פרטיות מוחלטת",
     description: "וילה מגודרת עם כניסה פרטית, המבטיחה לכם חופשה שלווה ואינטימית ללא הפרעות."
   },
   {
-    icon: Star,
+    icon: Gem,
     title: "מתקני יוקרה",
     description: "כל מה שצריך לחופשה מושלמת: בריכה מפנקת, מקווה פרטי, מטבח מאובזר וחצר ירוקה."
   },
   {
-    icon: MapPin,
+    icon: Mountain,
     title: "מיקום חלומי",
     description: "בלב נוף כנרת, עם נוף עוצר נשימה וגישה נוחה למגוון אטרקציות ומסלולי טיול בגליל."
   }
