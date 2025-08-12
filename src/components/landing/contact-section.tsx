@@ -6,7 +6,8 @@ import { z } from "zod";
 import { format } from "date-fns";
 import { he } from 'date-fns/locale';
 import { Calendar as CalendarIcon, Loader2, Phone, Mail } from "lucide-react";
-import { contactSchema, submitInquiry } from "@/app/actions";
+import { contactSchema } from "@/lib/schema";
+import { submitInquiry } from "@/app/actions";
 import { useToast } from "@/hooks/use-toast";
 
 import { Button } from "@/components/ui/button";
