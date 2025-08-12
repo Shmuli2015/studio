@@ -11,7 +11,7 @@ export const galleryImages = [
     "data-ai-hint": "villa pool sunset",
   },
   { 
-    src: "https://images.unsplash.com/photo-1622383619894-665701a2334f?q=80&w=800&h=600&fit=crop",
+    src: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=800&h=600&fit=crop",
     alt: "חצר ירוקה ומטופחת עם ערסלים ונדנדות",
     "data-ai-hint": "villa garden hammocks",
   },
