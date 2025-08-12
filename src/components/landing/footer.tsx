@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail } from "lucide-react";
-import { KinneretVistaLogo } from "@/components/icons/logo";
+import { Phone, Mail, Home } from "lucide-react";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -13,7 +12,7 @@ export function Footer() {
           
           <div className="flex flex-col items-center md:items-start space-y-4">
             <div className="flex items-center gap-3 mb-2">
-              <KinneretVistaLogo className="h-10 w-10 text-primary" />
+              <Home className="h-10 w-10 text-primary" />
               <span className="text-2xl font-bold text-foreground">וילת נוף כנרת</span>
             </div>
             <p className="max-w-xs text-muted-foreground">

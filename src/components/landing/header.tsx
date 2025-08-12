@@ -4,9 +4,8 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Phone } from 'lucide-react';
+import { Menu, Phone, Home } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { KinneretVistaLogo } from '@/components/icons/logo';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,7 +33,7 @@ export function Header() {
     )}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-3">
-          <KinneretVistaLogo className="h-8 w-8 text-primary" />
+          <Home className="h-8 w-8 text-primary" />
           <span className={cn("text-xl font-bold font-headline transition-colors", isScrolled ? 'text-primary' : 'text-white')} style={!isScrolled ? { textShadow: '1px 1px 3px rgba(0,0,0,0.5)' } : {}}>
             וילת נוף כנרת
           </span>
@@ -63,7 +62,7 @@ export function Header() {
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <div className="flex flex-col h-full">
                 <div className="flex items-center gap-3 p-4 border-b">
-                   <KinneretVistaLogo className="h-8 w-8 text-primary" />
+                   <Home className="h-8 w-8 text-primary" />
                     <span className="text-xl font-bold font-headline text-primary">
                       וילת נוף כנרת
                     </span>
