@@ -71,6 +71,7 @@ export function Gallery() {
               opts={{
                 align: "start",
                 loop: true,
+                direction: 'rtl',
               }}
               className="w-full"
             >
@@ -127,7 +128,7 @@ export function Gallery() {
               className="absolute top-1/2 -translate-y-1/2 left-2 bg-black/50 text-white hover:bg-black/75 hover:text-white"
               onClick={goToPrevious}
             >
-              <ArrowRight className="h-6 w-6" />
+              <ArrowLeft className="h-6 w-6" />
             </Button>
             
             <Button
@@ -136,7 +137,7 @@ export function Gallery() {
               className="absolute top-1/2 -translate-y-1/2 right-2 bg-black/50 text-white hover:bg-black/75 hover:text-white"
               onClick={goToNext}
             >
-              <ArrowLeft className="h-6 w-6" />
+              <ArrowRight className="h-6 w-6" />
             </Button>
           </div>
         </DialogContent>
