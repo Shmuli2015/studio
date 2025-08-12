@@ -35,7 +35,7 @@ export function Header() {
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-3">
           <KinneretVistaLogo className="h-8 w-8 text-primary" />
-          <span className={cn("text-xl font-bold font-headline text-primary", { 'text-white': !isScrolled })}>
+          <span className={cn("text-xl font-bold font-headline transition-colors", isScrolled ? 'text-primary' : 'text-white')}>
             וילת נוף כנרת
           </span>
         </Link>
@@ -55,7 +55,7 @@ export function Header() {
           </Button>
           <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden text-primary">
+              <Button variant="ghost" size="icon" className={cn("md:hidden", isScrolled ? "text-primary" : "text-white hover:text-white hover:bg-white/10")}>
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Open menu</span>
               </Button>

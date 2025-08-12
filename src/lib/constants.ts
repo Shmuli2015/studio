@@ -30,12 +30,12 @@ export const galleryImages = [
     "data-ai-hint": "luxury living room",
   },
   { 
-    src: "https://images.unsplash.com/photo-1534971715610-14903328e41a?q=80&w=800&h=600&fit=crop",
+    src: "https://images.unsplash.com/photo-1615873968403-89e068629265?q=80&w=800&h=600&fit=crop",
     alt: "נוף עוצר נשימה של הכנרת מהוילה",
     "data-ai-hint": "sea galilee view",
   },
   { 
-    src: "https://images.unsplash.com/photo-1498452841444-8e10e4f8d3b8?q=80&w=800&h=600&fit=crop",
+    src: "https://images.unsplash.com/photo-1616137356345-5df75604142b?q=80&w=800&h=600&fit=crop",
     alt: "פינת ישיבה נעימה בחצר עם פרחים",
     "data-ai-hint": "villa garden flowers",
   },
