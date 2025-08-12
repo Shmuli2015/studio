@@ -11,7 +11,7 @@ export const galleryImages = [
     "data-ai-hint": "villa pool sunset",
   },
   { 
-    src: "https://images.unsplash.com/photo-1575424933923-44a3e2a44f9c?q=80&w=800&h=600&fit=crop",
+    src: "https://images.unsplash.com/photo-1600585152225-357EA62c70a9?q=80&w=800&h=600&fit=crop",
     alt: "חצר ירוקה ומטופחת עם ערסלים ונדנדות",
     "data-ai-hint": "villa garden hammocks",
   },
@@ -36,7 +36,7 @@ export const galleryImages = [
     "data-ai-hint": "sea galilee view",
   },
   { 
-    src: "https://images.unsplash.com/photo-1616137356345-5df75604142b?q=80&w=800&h=600&fit=crop",
+    src: "https://images.unsplash.com/photo-1582201948952-a4a003310704?q=80&w=800&h=600&fit=crop",
     alt: "פינת ישיבה נעימה בחצר עם פרחים",
     "data-ai-hint": "villa garden flowers",
   },
