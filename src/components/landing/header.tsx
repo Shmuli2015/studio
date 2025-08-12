@@ -35,13 +35,13 @@ export function Header() {
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-3">
           <KinneretVistaLogo className="h-8 w-8 text-primary" />
-          <span className={cn("text-xl font-bold font-headline transition-colors", isScrolled ? 'text-primary' : 'text-white')}>
+          <span className={cn("text-xl font-bold font-headline transition-colors", isScrolled ? 'text-primary' : 'text-white')} style={!isScrolled ? { textShadow: '1px 1px 3px rgba(0,0,0,0.5)' } : {}}>
             וילת נוף כנרת
           </span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map((link) => (
-            <Link key={link.href} href={link.href} className={cn("text-sm font-medium transition-colors hover:text-primary", { 'text-white': !isScrolled, 'text-foreground': isScrolled })}>
+            <Link key={link.href} href={link.href} className={cn("text-sm font-medium transition-colors hover:text-primary", { 'text-white': !isScrolled, 'text-foreground': isScrolled })} style={!isScrolled ? { textShadow: '1px 1px 3px rgba(0,0,0,0.5)' } : {}}>
               {link.label}
             </Link>
           ))}
