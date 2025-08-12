@@ -9,9 +9,8 @@ export function Hero() {
         src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1920&h=1080&fit=crop"
         alt="נוף פנורמי של הוילה עם בריכה ושקיעה על הכנרת"
         fill
-        objectFit="cover"
         quality={80}
-        className="z-0 brightness-50"
+        className="z-0 brightness-50 object-cover"
         data-ai-hint="luxury villa pool"
         priority
       />
