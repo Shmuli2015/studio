@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Waves, Home, Trees, ChefHat, ShieldCheck } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
+import { AnimatedSection } from "./animated-section";
 
 interface Feature {
   icon: LucideIcon;
@@ -19,11 +20,11 @@ const features: Feature[] = [
 
 export function About() {
   return (
-    <section id="about" className="py-16 md:py-24 bg-background">
+    <AnimatedSection id="about" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="order-2 md:order-1">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               הוילה המושלמת לחופשה שלכם
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
@@ -38,7 +39,7 @@ export function About() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-800">{feature.name}</h3>
+                    <h3 className="font-bold text-foreground">{feature.name}</h3>
                     <p className="text-muted-foreground">{feature.description}</p>
                   </div>
                 </div>
@@ -54,13 +55,13 @@ export function About() {
                   width={600}
                   height={700}
                   className="w-full h-auto object-cover"
-                  data-ai-hint="luxury interior"
+                  data-ai-hint="luxury villa interior"
                 />
               </CardContent>
             </Card>
           </div>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

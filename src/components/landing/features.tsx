@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Lock, Star, MapPin } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
+import { AnimatedSection } from "./animated-section";
 
 interface Advantage {
   icon: LucideIcon;
@@ -28,10 +29,10 @@ const advantages: Advantage[] = [
 
 export function Features() {
   return (
-    <section id="features" className="py-16 md:py-24 bg-background">
+    <AnimatedSection id="features" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800">למה לבחור בנו?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">למה לבחור בנו?</h2>
           <p className="text-muted-foreground mt-2 text-lg">היתרונות שהופכים את החופשה שלכם למושלמת</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -50,6 +51,6 @@ export function Features() {
           ))}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

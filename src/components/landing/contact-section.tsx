@@ -30,6 +30,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 import { Card, CardContent } from "../ui/card";
 import { useState } from "react";
+import { AnimatedSection } from "./animated-section";
 
 type ContactFormValues = z.infer<typeof contactSchema>;
 
@@ -63,11 +64,11 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-secondary/50">
+    <AnimatedSection id="contact" className="py-16 md:py-24 bg-secondary/50">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-5 gap-10">
           <div className="lg:col-span-2">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">הזמינו את החופשה שלכם</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">הזמינו את החופשה שלכם</h2>
             <p className="text-muted-foreground mt-2 text-lg mb-6">
               מוכנים לחופשה בלתי נשכחת? השאירו פרטים ונחזור אליכם בהקדם.
             </p>
@@ -183,6 +184,6 @@ export function ContactSection() {
           </div>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
