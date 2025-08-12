@@ -5,10 +5,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { format } from "date-fns";
 import { he } from 'date-fns/locale';
-import { Calendar as CalendarIcon, Loader2, Phone, Mail } from "lucide-react";
+import { Calendar as CalendarIcon, Phone, Mail, MessageSquare } from "lucide-react";
 import { contactSchema } from "@/lib/schema";
-import { submitInquiry } from "@/app/actions";
-import { useToast } from "@/hooks/use-toast";
 
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
@@ -29,15 +27,11 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 import { Card, CardContent } from "../ui/card";
-import { useState } from "react";
 import { AnimatedSection } from "./animated-section";
 
 type ContactFormValues = z.infer<typeof contactSchema>;
 
 export function ContactSection() {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
@@ -47,20 +41,24 @@ export function ContactSection() {
     },
   });
 
-  async function onSubmit(data: ContactFormValues) {
-    setIsSubmitting(true);
-    const result = await submitInquiry(data);
-    setIsSubmitting(false);
-
-    toast({
-      title: result.success ? "פנייתך נשלחה!" : "אופס! משהו השתבש",
-      description: result.message,
-      variant: result.success ? "default" : "destructive",
-    });
-
-    if (result.success) {
-      form.reset();
-    }
+  function onSubmit(data: ContactFormValues) {
+    const whatsAppNumber = "972532861478"; // מספר טלפון בינלאומי ללא '+'
+    const name = `שם: ${data.name}`;
+    const phone = `טלפון: ${data.phone}`;
+    const date = data.date ? `תאריך: ${format(data.date, "PPP", { locale: he })}` : "";
+    const notes = data.notes ? `הערות: ${data.notes}` : "";
+    
+    const message = [
+        "היי, אני פונה בנוגע לוילה בנוף כנרת.",
+        name,
+        phone,
+        date,
+        notes
+    ].filter(Boolean).join("\n");
+    
+    const whatsappUrl = `https://wa.me/${whatsAppNumber}?text=${encodeURIComponent(message)}`;
+    
+    window.open(whatsappUrl, "_blank");
   }
 
   return (
@@ -173,9 +171,9 @@ export function ContactSection() {
                         </FormItem>
                       )}
                     />
-                    <Button type="submit" className="w-full text-lg" size="lg" disabled={isSubmitting}>
-                      {isSubmitting ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
-                      {isSubmitting ? 'שולח...' : 'שלחו פנייה'}
+                    <Button type="submit" className="w-full text-lg" size="lg">
+                      <MessageSquare className="mr-2 h-5 w-5" />
+                      שלחו פנייה בוואטסאפ
                     </Button>
                   </form>
                 </Form>
