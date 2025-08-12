@@ -16,14 +16,14 @@ export const galleryImages = [
     "data-ai-hint": "villa garden hammocks",
   },
   { 
-    src: "https://images.unsplash.com/photo-1600607686527-6fb886290705?q=80&w=800&h=600&fit=crop",
+    src: "https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=800&h=600&fit=crop",
     alt: "מטבח גדול ומאובזר במכשור מודרני",
     "data-ai-hint": "luxury kitchen modern",
   },
   { 
-    src: "https://images.unsplash.com/photo-1598228723793-52752b93231d?q=80&w=800&h=600&fit=crop",
+    src: "https://images.unsplash.com/photo-1562790351-d273a961e0e9?q=80&w=800&h=600&fit=crop",
     alt: "מקווה פרטי וכשר לשימוש האורחים",
-    "data-ai-hint": "private mikveh ritualarium",
+    "data-ai-hint": "private bathroom luxury",
   },
   { 
     src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&h=600&fit=crop",
