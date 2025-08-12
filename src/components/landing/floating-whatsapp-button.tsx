@@ -1,8 +1,8 @@
 "use client";
 
 import Link from 'next/link';
-import { MessageSquare } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { WhatsAppIcon } from './whatsapp-icon';
 
 export function FloatingWhatsAppButton() {
   const whatsAppNumber = "972532861478";
@@ -23,7 +23,7 @@ export function FloatingWhatsAppButton() {
       )}
       aria-label="צור קשר בוואטסאפ"
     >
-      <MessageSquare className="h-8 w-8" />
+      <WhatsAppIcon className="h-8 w-8" />
     </Link>
   );
 }
