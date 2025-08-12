@@ -50,7 +50,7 @@ export function About() {
             <Card className="overflow-hidden shadow-2xl rounded-2xl">
               <CardContent className="p-0">
                 <Image
-                  src="https://placehold.co/600x700.png"
+                  src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=600&h=700&fit=crop"
                   alt="סלון מרווח ומעוצב בוילה"
                   width={600}
                   height={700}

@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section className="relative h-[80vh] min-h-[600px] w-full flex items-center justify-center text-center text-white">
       <Image
-        src="https://placehold.co/1920x1080.png"
+        src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1920&h=1080&fit=crop"
         alt="נוף פנורמי של הוילה עם בריכה ושקיעה על הכנרת"
         fill
         objectFit="cover"

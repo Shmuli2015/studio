@@ -1,41 +1,41 @@
 export const galleryImages = [
   { 
-    src: "https://placehold.co/800x600.png",
+    src: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=800&h=600&fit=crop",
     alt: "חזית הוילה עם נוף פנורמי לכנרת",
     "data-ai-hint": "luxury villa exterior",
   },
   { 
-    src: "https://placehold.co/800x600.png",
+    src: "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=800&h=600&fit=crop",
     alt: "בריכת השחייה המפנקת בשעת שקיעה",
     "data-ai-hint": "villa pool sunset",
   },
   { 
-    src: "https://placehold.co/800x600.png",
+    src: "https://images.unsplash.com/photo-1571055107559-3e67626cff6f?q=80&w=800&h=600&fit=crop",
     alt: "חצר ירוקה ומטופחת עם ערסלים ונדנדות",
     "data-ai-hint": "villa garden hammocks",
   },
   { 
-    src: "https://placehold.co/800x600.png",
+    src: "https://images.unsplash.com/photo-1600607686527-6fb886290705?q=80&w=800&h=600&fit=crop",
     alt: "מטבח גדול ומאובזר במכשור מודרני",
     "data-ai-hint": "luxury kitchen modern",
   },
   { 
-    src: "https://placehold.co/800x600.png",
+    src: "https://images.unsplash.com/photo-1598228723793-52752b93231d?q=80&w=800&h=600&fit=crop",
     alt: "מקווה פרטי וכשר לשימוש האורחים",
     "data-ai-hint": "private mikveh ritualarium",
   },
   { 
-    src: "https://placehold.co/800x600.png",
+    src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&h=600&fit=crop",
     alt: "סלון מעוצב ומרווח",
     "data-ai-hint": "luxury living room",
   },
   { 
-    src: "https://placehold.co/800x600.png",
+    src: "https://images.unsplash.com/photo-1534971715610-14903328e41a?q=80&w=800&h=600&fit=crop",
     alt: "נוף עוצר נשימה של הכנרת מהוילה",
     "data-ai-hint": "sea galilee view",
   },
   { 
-    src: "https://placehold.co/800x600.png",
+    src: "https://images.unsplash.com/photo-1498452841444-8e10e4f8d3b8?q=80&w=800&h=600&fit=crop",
     alt: "פינת ישיבה נעימה בחצר עם פרחים",
     "data-ai-hint": "villa garden flowers",
   },
