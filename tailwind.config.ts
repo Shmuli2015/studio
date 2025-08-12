@@ -104,12 +104,23 @@ export default {
             opacity: '1',
             transform: 'translateY(0)'
           },
-        }
+        },
+        'pulse-whatsapp': {
+          '0%, 100%': {
+            transform: 'scale(1)',
+            boxShadow: '0 0 0 0 rgba(37, 211, 102, 0.7)',
+          },
+          '50%': {
+            transform: 'scale(1.05)',
+            boxShadow: '0 0 0 10px rgba(37, 211, 102, 0)',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'fade-in-down': 'fade-in-down 0.5s ease-out forwards'
+        'fade-in-down': 'fade-in-down 0.5s ease-out forwards',
+        'pulse-whatsapp': 'pulse-whatsapp 2s infinite',
       },
     },
   },
