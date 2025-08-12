@@ -4,6 +4,13 @@ import { useState } from "react";
 import Image from "next/image";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { galleryImages } from "@/lib/constants";
 import { ArrowLeft, ArrowRight, X } from "lucide-react";
 import { AnimatedSection } from "./animated-section";
@@ -34,7 +41,9 @@ export function Gallery() {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">הצצה לוילה שלכם</h2>
           <p className="text-muted-foreground mt-2 text-lg">גלריית תמונות מתוך הוילה והנוף המרהיב</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        
+        {/* Desktop Grid */}
+        <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {galleryImages.map((image, index) => (
             <div
               key={index}
@@ -55,6 +64,40 @@ export function Gallery() {
             </div>
           ))}
         </div>
+
+        {/* Mobile Carousel */}
+        <div className="sm:hidden">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent>
+                {galleryImages.map((image, index) => (
+                  <CarouselItem key={index} className="basis-11/12" onClick={() => openLightbox(index)}>
+                    <div className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg">
+                       <Image
+                        src={image.src}
+                        alt={image.alt}
+                        width={400}
+                        height={300}
+                        className="w-full h-full object-cover"
+                        data-ai-hint={image['data-ai-hint']}
+                      />
+                       <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                        <p className="text-white text-sm font-semibold">{image.alt}</p>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="absolute left-3" />
+              <CarouselNext className="absolute right-3" />
+            </Carousel>
+        </div>
+
       </div>
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>

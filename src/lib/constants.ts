@@ -11,17 +11,17 @@ export const galleryImages = [
     "data-ai-hint": "villa pool sunset",
   },
   { 
-    src: "https://images.unsplash.com/photo-1600585152225-357EA62c70a9?q=80&w=800&h=600&fit=crop",
-    alt: "חצר ירוקה ומטופחת עם ערסלים ונדנדות",
+    src: "https://images.unsplash.com/photo-1613553423758-2515b6423133?q=80&w=800&h=600&fit=crop",
+    alt: "חצר ירוקה ומטופחת עם ערסלים",
     "data-ai-hint": "villa garden hammocks",
   },
   { 
-    src: "https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=800&h=600&fit=crop",
+    src: "https://images.unsplash.com/photo-1600607686527-6fb8862922a1?q=80&w=800&h=600&fit=crop",
     alt: "מטבח גדול ומאובזר במכשור מודרני",
     "data-ai-hint": "luxury kitchen modern",
   },
   { 
-    src: "https://images.unsplash.com/photo-1562790351-d273a961e0e9?q=80&w=800&h=600&fit=crop",
+    src: "https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?q=80&w=800&h=600&fit=crop",
     alt: "מקווה פרטי וכשר לשימוש האורחים",
     "data-ai-hint": "private bathroom luxury",
   },
@@ -36,8 +36,8 @@ export const galleryImages = [
     "data-ai-hint": "sea galilee view",
   },
   { 
-    src: "https://images.unsplash.com/photo-1582201948952-a4a003310704?q=80&w=800&h=600&fit=crop",
-    alt: "פינת ישיבה נעימה בחצר עם פרחים",
-    "data-ai-hint": "villa garden flowers",
+    src: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=800&h=600&fit=crop",
+    alt: "פינת ישיבה נעימה בחצר",
+    "data-ai-hint": "villa garden sitting area",
   },
 ];
