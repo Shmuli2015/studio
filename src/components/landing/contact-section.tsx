@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useForm } from "react-hook-form";
@@ -85,10 +86,6 @@ export function ContactSection() {
                 <Phone className="w-5 h-5 text-accent" />
                 <span>053-2861478</span>
               </a>
-               <p className="flex items-center gap-3 text-lg">
-                <Mail className="w-5 h-5 text-accent" />
-                <span>nof.kinneret.villa@email.com</span>
-              </p>
             </div>
           </div>
           <div className="lg:col-span-3">
