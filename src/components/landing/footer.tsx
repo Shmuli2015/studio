@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, Home, Facebook, Instagram, Twitter } from "lucide-react";
+import { Phone, Mail, Home, Facebook, Instagram, Twitter, Code } from "lucide-react";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -48,14 +48,15 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-           <div className="text-center sm:text-right">
+        <div className="border-t border-border pt-8 flex flex-col-reverse sm:flex-row justify-between items-center gap-6">
+           <div className="text-center w-full">
             <p className="text-sm text-muted-foreground">
               &copy; {year} וילת נוף כנרת. כל הזכויות שמורות.
             </p>
-            <p className="text-sm text-muted-foreground">
-              נבנה ע"י שמואל רוזנברג
-            </p>
+            <div className="flex items-center justify-center gap-1 text-sm text-muted-foreground">
+              <Code className="h-4 w-4" />
+              <span>נבנה ע"י שמואל רוזנברג</span>
+            </div>
            </div>
            <div className="flex items-center gap-4">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Facebook className="h-5 w-5" /></a>
