@@ -16,7 +16,7 @@ export const galleryImages = [
     "data-ai-hint": "villa garden hammocks",
   },
   { 
-    src: "https://images.unsplash.com/photo-1600607686527-6fb8862922a1?q=80&w=800&h=600&fit=crop",
+    src: "https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=800&h=600&fit=crop",
     alt: "מטבח גדול ומאובזר במכשור מודרני",
     "data-ai-hint": "luxury kitchen modern",
   },
