@@ -28,6 +28,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 import { Card, CardContent } from "../ui/card";
 import { AnimatedSection } from "./animated-section";
+import { DateRange } from "react-day-picker";
 
 type ContactFormValues = z.infer<typeof contactSchema>;
 
@@ -45,14 +46,23 @@ export function ContactSection() {
     const whatsAppNumber = "972532861478"; // מספר טלפון בינלאומי ללא '+'
     const name = `שם: ${data.name}`;
     const phone = `טלפון: ${data.phone}`;
-    const date = data.date ? `תאריך: ${format(data.date, "PPP", { locale: he })}` : "";
+    
+    let dateRange = "";
+    if (data.date?.from) {
+      if (data.date.to) {
+        dateRange = `תאריכים: ${format(data.date.from, "d בLLL", { locale: he })} - ${format(data.date.to, "d בLLL, yyyy", { locale: he })}`;
+      } else {
+        dateRange = `תאריך: ${format(data.date.from, "d בLLL, yyyy", { locale: he })}`;
+      }
+    }
+
     const notes = data.notes ? `הערות: ${data.notes}` : "";
     
     const message = [
         "היי, אני פונה בנוגע לוילה בנוף כנרת.",
         name,
         phone,
-        date,
+        dateRange,
         notes
     ].filter(Boolean).join("\n");
     
@@ -119,7 +129,7 @@ export function ContactSection() {
                       name="date"
                       render={({ field }) => (
                         <FormItem className="flex flex-col">
-                          <FormLabel>תאריך מבוקש (אופציונלי)</FormLabel>
+                          <FormLabel>טווח תאריכים (אופציונלי)</FormLabel>
                           <Popover>
                             <PopoverTrigger asChild>
                               <FormControl>
@@ -127,26 +137,34 @@ export function ContactSection() {
                                   variant={"outline"}
                                   className={cn(
                                     "w-full justify-start text-right font-normal",
-                                    !field.value && "text-muted-foreground"
+                                    !field.value?.from && "text-muted-foreground"
                                   )}
                                 >
                                   <CalendarIcon className="ml-2 h-4 w-4" />
-                                  {field.value ? (
-                                    format(field.value, "PPP", { locale: he })
+                                  {field.value?.from ? (
+                                    field.value.to ? (
+                                      <>
+                                        {format(field.value.from, "d LLL, y", { locale: he })} -{' '}
+                                        {format(field.value.to, "d LLL, y", { locale: he })}
+                                      </>
+                                    ) : (
+                                      format(field.value.from, "d LLL, y", { locale: he })
+                                    )
                                   ) : (
-                                    <span>בחרו תאריך</span>
+                                    <span>בחרו טווח תאריכים</span>
                                   )}
                                 </Button>
                               </FormControl>
                             </PopoverTrigger>
                             <PopoverContent className="w-auto p-0" align="start">
                               <Calendar
-                                mode="single"
-                                selected={field.value}
+                                mode="range"
+                                selected={field.value as DateRange}
                                 onSelect={field.onChange}
-                                disabled={(date) => date < new Date()}
+                                disabled={(date) => date < new Date(new Date().setHours(0,0,0,0))}
                                 initialFocus
                                 locale={he}
+                                numberOfMonths={2}
                               />
                             </PopoverContent>
                           </Popover>

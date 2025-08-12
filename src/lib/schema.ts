@@ -6,7 +6,10 @@ export const contactSchema = z.object({
     .string()
     .min(9, { message: "מספר טלפון לא תקין." })
     .regex(/^0\d{8,9}$/, { message: "מספר טלפון לא תקין." }),
-  date: z.date().optional(),
+  date: z.object({
+    from: z.date().optional(),
+    to: z.date().optional(),
+  }).optional(),
   notes: z
     .string()
     .max(500, { message: "ההערות יכולות להכיל עד 500 תווים." })
